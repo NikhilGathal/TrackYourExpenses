@@ -22,7 +22,7 @@ function App() {
   const [editingid, seteditingid] = useLocalStorage('editingid','')
   return (
     <>
-     <h1  style={ {textAlign:'center'} }>Track Your Expense</h1>
+     <h1  style={ {textAlign:'center'} }>Track Your Expenses</h1>
       <main>
        
         <div className="expense-tracker">
