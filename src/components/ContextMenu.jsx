@@ -1,7 +1,7 @@
 import React from 'react'
 
 function ContextMenu({position, setmenuposition ,setExpenses , rowid ,setExpense,expense,seteditingid}) {
-  if(!position.left)
+  if(!position.left) //this return is for hiding that menu block when we have not clicked at any place 
     return
   return (
     <div className="context-menu" style={ {left:position.left,top: position.top ,display:'block' }}>
@@ -27,14 +27,6 @@ function ContextMenu({position, setmenuposition ,setExpenses , rowid ,setExpense
   }
     }>Edit</div>
 
-
-
-
-
-
-
-
-    
     <div onClick={()=>
      {console.log('Deleting')
       setmenuposition ({})

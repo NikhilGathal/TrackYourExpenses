@@ -171,6 +171,8 @@ function ExpenseForm({
     // console.log(name ,value);
     setExpense((prev) => ({ ...prev, [name]: value }))
     seterrors({})
+    // if we want only that particular field to show the error message then use below code??
+    // seterrors((prev)=> ( {...prev , [name] : ''} ))
   }
 
   // const getformdata = (form) => {

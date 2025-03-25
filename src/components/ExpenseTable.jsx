@@ -5,7 +5,7 @@ import { useLocalStorage } from '../hooks/useLocalStorage'
 // import { useFilter } from '../hooks/useFilter'
 
 function ExpenseTable({ expense, setExpenses, setExpense, seteditingid }) {
-  // console.log(expense);
+  console.log(expense);
 
   // without using custom hook for filter
 
@@ -48,7 +48,7 @@ function ExpenseTable({ expense, setExpenses, setExpense, seteditingid }) {
       />
       <table
         className="expense-table"
-        onClick={() => {
+        onClick={() => {  // here to close block we are using this setting position to empty object 
           if (menuposition.left) setmenuposition({})
         }}
       >
@@ -133,7 +133,7 @@ function ExpenseTable({ expense, setExpenses, setExpense, seteditingid }) {
           </tr>
         </thead>
         <tbody>
-          {result.sort(sortcallback).map(({ id, title, category, amount }) => (
+          {result.sort(sortcallback).map( ({ id, title, category, amount }) => (
             <tr
               key={id}
               onContextMenu={(e) => {
@@ -146,7 +146,8 @@ function ExpenseTable({ expense, setExpenses, setExpense, seteditingid }) {
               <td>{category}</td>
               <td>₹{amount}</td>
             </tr>
-          ))}
+          )
+          )}
 
           {/* {expense.map(({id, title, category, amount}) => (
           <tr key={id}>
