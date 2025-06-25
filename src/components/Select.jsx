@@ -25,7 +25,7 @@ function Select({
         // ref={categoryref}
       >
         {defaultoption && (
-          <option value="" hidden>
+          <option value=""hidden >
             {defaultoption}
           </option>
         )}

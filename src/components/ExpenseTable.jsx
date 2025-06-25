@@ -5,7 +5,7 @@ import { useLocalStorage } from '../hooks/useLocalStorage'
 // import { useFilter } from '../hooks/useFilter'
 
 function ExpenseTable({ expense, setExpenses, setExpense, seteditingid }) {
-  console.log(expense);
+  // console.log(expense);
 
   // without using custom hook for filter
 
@@ -93,7 +93,7 @@ function ExpenseTable({ expense, setExpenses, setExpense, seteditingid }) {
              }
 
               }>
-                <option value="">{data}</option>
+                <option value="">All</option>
                 <option value="Grocery">Grocery</option>
                 <option value="Clothes">Clothes</option>
                 <option value="Bills">Bills</option>
@@ -137,6 +137,8 @@ function ExpenseTable({ expense, setExpenses, setExpense, seteditingid }) {
             <tr
               key={id}
               onContextMenu={(e) => {
+                console.log('hi');
+                // e.stopPropagation()
                 e.preventDefault()
                 setmenuposition({ left: e.clientX + 5, top: e.clientY + 5 })
                 setrowid(id)
